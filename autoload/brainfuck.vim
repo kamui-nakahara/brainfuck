@@ -132,15 +132,15 @@ function s:run()
   if (s:i<len(s:buffer))
     if (s:buffer[s:i]==s:INC)
       let s:memory[s:point]+=1
-      while (s:memory[s:point]>127)
-	let s:memory[s:point]=s:memory[s:point]-128
-      endwhile
+      " while (s:memory[s:point]>127)
+	" let s:memory[s:point]=s:memory[s:point]-128
+      " endwhile
       let s:i+=1
     elseif (s:buffer[s:i]==s:DEC)
       let s:memory[s:point]-=1
-      while (s:memory[s:point]<0)
-	let s:memory[s:point]=128-s:memory[s:point]
-      endwhile
+      " while (s:memory[s:point]<0)
+	" let s:memory[s:point]=128-s:memory[s:point]
+      " endwhile
       let s:i+=1
     elseif (s:buffer[s:i]==s:LEFT)
       if (s:point-1<0)

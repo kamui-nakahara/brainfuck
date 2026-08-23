@@ -72,7 +72,7 @@ endfunction
 
 function brainfuck#debug()
   let s:line=getline(1,"$")
-  call brainfuck#init(join(s:line,""),input("入力:"))
+  call brainfuck#init(join(s:line,""),input("入力:")."\n")
   let flag=v:true
   call win_gotoid(s:win1_id)
   if win_getid()!=s:win1_id
